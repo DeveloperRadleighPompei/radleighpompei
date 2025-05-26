@@ -3,7 +3,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Radleigh Pompei",
-  initials: "DV",
+  initials: "RJP",
   url: "https://radleighpompei.vercel.app/",
   description:
     "I like programming machine learning models in pytorch. I also like robotics!",
@@ -20,7 +20,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/articles", icon: NotebookIcon, label: "Articles" },
   ],
   contact: {
     email: "radleighpompei@gmail.com",
@@ -60,7 +60,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://placehold.co/600x400",
+      image: "/resnet18.png",
       video:
         "",
     },
