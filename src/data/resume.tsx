@@ -64,5 +64,26 @@ export const DATA = {
       video:
         "",
     },
+    {
+      title: "Resnet18 CIFAR10",
+      href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/CIFAR10-Resnet18/main.py",
+      active: true,
+      description:
+          "Used data augmentation (random crop, horizontal flip) and normalization. The model uses of residual BasicBlocks with skip connections, with 4 layers stacked. Training uses SGD with momentum, weight decay, and a step LR scheduler over 50 epochs. Final model achieves just over 90% accuracy on the test set.",
+      technologies: [
+        "Python",
+        "Pytorch"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/CIFAR10-Resnet18/main.py",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/resnet18.png",
+      video:
+          "",
+    },
   ],
 } as const;
