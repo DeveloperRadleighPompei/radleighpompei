@@ -69,7 +69,7 @@ export const DATA = {
       href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/MNIST-GAN/main.py",
       active: true,
       description:
-          "Used data augmentation (random crop, horizontal flip) and normalization. The model uses of residual BasicBlocks with skip connections, with 4 layers stacked. Training uses SGD with momentum, weight decay, and a step LR scheduler over 50 epochs. Final model achieves just over 90% accuracy on the test set.",
+          "Used the MNIST dataset with normalization and no data augmentation. The model is a DCGAN with a transposed convolutional generator and a convolutional discriminator, both using batch normalization and non-linear activations. Training was done using the Adam optimizer with β1=0.5, learning rate scheduling, and binary cross-entropy loss. The network was trained for 100 epochs, successfully generating realistic handwritten digits.",
       technologies: [
         "Python",
         "Pytorch"
