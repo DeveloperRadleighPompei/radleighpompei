@@ -6,19 +6,28 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatDate(date: string) {
-  let currentDate = new Date().getTime();
-  if (!date.includes("T")) {
-    date = `${date}T00:00:00`;
-  }
-  let targetDate = new Date(date).getTime();
-  let timeDifference = Math.abs(currentDate - targetDate);
-  let daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  // Parse DD-MM-YYYY format manually
+  const parts = date.split("-");
+  if (parts.length !== 3) return "Invalid Date";
 
-  let fullDate = new Date(date).toLocaleString("en-us", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  const [dd, mm, yyyy] = parts.map(Number);
+
+  // Note: JavaScript months are 0-based (0 = Jan)
+  const targetDateObj = new Date(yyyy, mm - 1, dd);
+
+  if (isNaN(targetDateObj.getTime())) {
+    return "Invalid Date";
+  }
+
+  const currentDate = new Date();
+  const timeDifference = Math.abs(currentDate.getTime() - targetDateObj.getTime());
+  const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  const day = targetDateObj.getDate();
+  const month = targetDateObj.toLocaleString("en-uk", { month: "long" });
+  const year = targetDateObj.getFullYear();
+
+  const fullDate = `${day} ${month} ${year}`;
 
   if (daysAgo < 1) {
     return "Today";
@@ -35,3 +44,4 @@ export function formatDate(date: string) {
     return `${fullDate} (${yearsAgo}y ago)`;
   }
 }
+
