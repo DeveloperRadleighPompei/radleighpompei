@@ -205,7 +205,7 @@ def evaluate(model, test_dataloader, loss_function, device):
     avgerage_loss = running_loss / total
     accuracy = correct / total
     return avgerage_loss, accuracy
-    ```
+```
 I use cross entropy loss for class classification,
 with SGD optimizer including momentum and weight decay for regularisation.
 The lr scheduler reduces learning rate every 30 epochs.
