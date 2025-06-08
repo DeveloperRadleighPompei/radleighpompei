@@ -108,5 +108,27 @@ export const DATA = {
       video:
           "",
     },
+    {
+      title: "Secure Password Manager in Rust",
+      href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/MNIST-GAN/main.py",
+      active: true,
+      description:
+          "Password manager programmed in rust. Used Argon2id encryption for master password and aesgcm for password vault, master password hash computed each vault operation which is used to unlock and edit the vault, this vault is then encoded in aesgcm.",
+      technologies: [
+        "Rust",
+        "Argon2",
+        "AES-GCM",
+      ],
+      links: [
+        {
+          type: "Github repo",
+          href: "https://github.com/DeveloperRadleighPompei/rust-password-manager/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/password.png",
+      video:
+          "",
+    },
   ],
 } as const;
