@@ -17,6 +17,7 @@ export const DATA = {
     "Seaborn",
     "Matplotlib",
     "C++",
+    "Rust",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -55,7 +56,7 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Github repo",
           href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/CIFAR10-Resnet18/main.py",
           icon: <Icons.globe className="size-3" />,
         },
@@ -76,12 +77,34 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Github repo",
           href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/MNIST-GAN/main.py",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/dcgan.png",
+      video:
+          "",
+    },
+    {
+      title: "Housing price",
+      href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/blob/main/MNIST-GAN/main.py",
+      active: true,
+      description:
+          "Created 2 ai models to predict housing prices in 2 areas. Accurate with in $24,000 of selling price!",
+      technologies: [
+        "Sklearn",
+        "Pytorch",
+        "Pandas ",
+      ],
+      links: [
+        {
+          type: "Github repo",
+          href: "https://github.com/DeveloperRadleighPompei/Radleigh-ML/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/house.png",
       video:
           "",
     },
